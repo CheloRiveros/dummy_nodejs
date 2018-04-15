@@ -19,7 +19,9 @@ const config = {
   },
   production: {
     extend: 'default',
-    use_env_variable: 'DATABASE_URL',
+    use_env_variable: 'iic2513template_dev',
+    username: 'chelo',
+    password: 'lalala'
   },
 };
 
