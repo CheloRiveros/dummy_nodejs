@@ -20,7 +20,6 @@ router.use(async (ctx, next) => {
 router.use('/', index.routes());
 router.use('/hello', hello.routes());
 router.use('/course', courses.routes());
-console.log(session);
 router.use('/session', session.routes());
 
 module.exports = router;
