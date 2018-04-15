@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>IIC2513 - CHANGE-ME</title>
+    <% if (env !== 'development') { %>
+      <link rel="stylesheet" href="/assets/styles.css">
+    <% } %>
+  </head>
+
+  <body>
+    <div id="container">
+      <header>
+        <a href="<%= coursesPath %>"><h1>My University</h1></a>
+        <div id="user-bar">
+        <!-- Agregar un mensaje dependiendo si el usuario ha ingresado o no.
+            - Si está disponible hay que desplegar su nombre y un boton para cerrar session
+            - Si no está disponible hay que saludarlo y colocar un link para iniciar session
+            Variables disponibles:
+            - currentUser: Usuario actual (undefined si no hay)
+            - destroySessionPath: Ruta para borrar la sessión
+            - newSessionPath: Ruta para hace login
+          -->
+        </div>
+      </header>
+      <%- body %>
+      <script src="/assets/app.js"></script>
+      <script src="/assets/appReact.js"></script>
+    </div>
+  </body>
+
+</html>

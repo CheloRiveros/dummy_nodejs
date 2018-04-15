@@ -1,0 +1,36 @@
+<h2>Courses</h2>
+<% if (!coursesList.length) { %>
+  <p>No Results</p>
+<% } else { %>
+  <table id="courses-list">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Codigo</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th colspan="2">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% coursesList.forEach((course) => { %>
+        <tr>
+          <td><%- course.id %></td>
+          <td><%- course.code %></td>
+          <td><%- course.name %></td>
+          <td><%- course.description%></td>
+          <td><a href="<%- editCoursePath(course) %>">Edit</a></td>
+          <td>
+            <form action="<%- deleteCoursePath(course) %>" method="POST">
+              <input type="hidden" name="_method" value="delete" />
+              <input type="submit" value="Eliminar" />
+            </form>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+
+<% } %>
+
+<a href="<%- newCoursePath %>">New course</a>
